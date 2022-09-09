@@ -18,7 +18,6 @@ public class ItemBasketService {
         this.itemBasket = itemBasket;
     }
 
-
     public void addItem(String itemID) {
         itemBasket.addAll(Arrays.stream(StringToIntArray(itemID)).boxed().collect(Collectors.toList()));
     }
@@ -29,7 +28,6 @@ public class ItemBasketService {
 
     private int[] StringToIntArray(String itemsID) {
         return Arrays.stream(itemsID.split(","))
-                .filter(w -> !w.isEmpty())
                 .mapToInt(s -> Integer.parseInt(s))
                 .toArray();
     }

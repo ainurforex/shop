@@ -19,7 +19,6 @@ public class ItemBasketController {
         itemBasketService.addItem(itemsID);
     }
 
-
     @GetMapping(path = "get")
     public Collection<Integer> getBasket() {
         return itemBasketService.getBasket();
